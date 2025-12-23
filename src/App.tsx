@@ -1,32 +1,39 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FluidBackground from './components/FluidBackground';
+import AboutUs from './pages/AboutUs';
 
-import LiquidBackground from './components/LiquidBackground';
-
-const App = () => {
-  return (
+const Home = () => (
+  <div
+    style={{
+      position: 'relative',
+      minHeight: '100vh',
+      color: '#0F172A', // Navy dark for contrast
+      isolation: 'isolate',
+    }}
+  >
+    <FluidBackground />
     <div
       style={{
         position: 'relative',
-        minHeight: '100vh',
-        color: '#ffffff',
-        isolation: 'isolate', // Helps with stacking context
+        zIndex: 10,
+        padding: '2rem',
+        pointerEvents: 'auto',
       }}
     >
-      <LiquidBackground />
-
-  
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 10,
-          padding: '2rem',
-          pointerEvents: 'auto', // Explicitly allow interaction
-        }}
-      >
-        <h1>NewCraftSync</h1>
-        <p>Move your mouse or touch the screen to see ripples.</p>
-        {/* Your other content */}
-      </div>
+      <h1>NewCraftSync</h1>
+      <p>Move your mouse or touch the screen to see ripples.</p>
     </div>
+  </div>
+);
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+      </Routes>
+    </Router>
   );
 };
 
