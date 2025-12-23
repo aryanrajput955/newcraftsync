@@ -1,0 +1,32 @@
+@import url('https://fonts.cdnfonts.com/css/montreal');
+@import "tailwindcss";
+
+:root {
+  /* Color Palette */
+  --navy-dark: #0F172A;      /* Primary / Headers */
+  --slate-blue: #475569;    /* Secondary text */
+  --snow-white: #F8FAFC;    /* Main background */
+  --alice-blue: #E2E8F0;    /* Section / card background */
+  --teal-accent: #14B8A6;   /* Primary accent */
+  --emerald-accent: #10B981;/* Success / CTA */
+    height: 100%;
+  /* Font Family */ 
+  --font-primary: 'Montreal', sans-serif;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-primary);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
