@@ -10,8 +10,7 @@ const LiquidBackground: React.FC = () => {
         width: '100%',
         height: '100%',
         zIndex: -10,
-        pointerEvents: 'auto',
-        backgroundColor: '#ffffff', // fallback during load
+        backgroundColor: '#ffffff', 
         overflow: 'hidden',
       }}
     >
