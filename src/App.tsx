@@ -12,7 +12,7 @@ import ProjectSection from './components/Projectssection'
 import ServicesSection from './components/ServicesSection'
 import ScrollPinSection from './components/WhyusSection'
 import TestimonialsSection from './components/Testimonials'
-import CTASection from './components/ctaSection'
+import CTASection from './components/CtaSection'
 const Home = () => (
 	<div
 		style={{

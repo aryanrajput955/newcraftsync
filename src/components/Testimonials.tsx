@@ -296,7 +296,7 @@ const TestimonialsSection: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         :global(:root) {
           --navy-dark: #0f172a;
           --slate-blue: #475569;

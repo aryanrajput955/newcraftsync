@@ -145,7 +145,7 @@ const WhyChooseUs: React.FC = () => {
               {reasons.map((reason, index) => (
                 <h3 
                   key={index}
-                  ref={el => listItemsRef.current[index] = el}
+                  ref={el => { listItemsRef.current[index] = el; }}
                   className="text-5xl md:text-7xl font-bold mb-4 leading-tight transition-colors duration-300"
                   style={{ 
                     color: '#e2e8f0',
@@ -175,7 +175,7 @@ const WhyChooseUs: React.FC = () => {
             {reasons.map((reason, index) => (
               <div
                 key={index}
-                ref={el => slidesRef.current[index] = el}
+                ref={el => { slidesRef.current[index] = el; }}
                 className="absolute w-full opacity-0 invisible"
               >
                 <div 

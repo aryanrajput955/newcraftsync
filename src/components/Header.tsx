@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
         </>
       )}
 
-      <style jsx>{`
+      <style>{`
         @keyframes slideIn {
           from {
             opacity: 0;
