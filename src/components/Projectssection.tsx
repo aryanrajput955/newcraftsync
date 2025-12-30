@@ -113,7 +113,7 @@ const ProjectSection: React.FC = () => {
             {portfolioItems.map((item, i) => (
               <div
                 key={item.id}
-                ref={(el) => (cardsRef.current[i] = el)}
+                ref={(el) => { cardsRef.current[i] = el; }}
                 className="relative rounded-xl overflow-hidden bg-[var(--alice-blue)]/90 shadow-2xl border border-[var(--alice-blue)] will-change-transform backdrop-blur-sm"
               >
                 <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden">

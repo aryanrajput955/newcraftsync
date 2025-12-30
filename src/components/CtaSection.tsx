@@ -114,7 +114,7 @@ const CTAComponent: React.FC<CTAComponentProps> = ({
         </button>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-down {
           from {
             opacity: 0;
