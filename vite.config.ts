@@ -11,4 +11,19 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  build: {
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          gsap: ['gsap'],
+          motion: ['framer-motion'],
+          three: ['three'],
+          lucide: ['lucide-react'],
+        },
+      },
+    },
+  },
 })
