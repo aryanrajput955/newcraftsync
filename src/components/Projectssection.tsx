@@ -160,7 +160,7 @@ const ProjectSection: React.FC = () => {
           </div>
 
           {/* Scroll Hint */}
-          <div className="text-center mt-10 text-sm text-(--slate-blue)">
+          <div className="text-center mt-10 text-sm text-[var(--slate-blue)]">
             Scroll to see the motion
           </div>
         </div>
