@@ -14,13 +14,7 @@ const TestimonialsSection = lazy(() => import('./components/Testimonials'))
 const CTASection = lazy(() => import('./components/CtaSection'))
 const AboutUs = lazy(() => import('./pages/AboutUs'))
 const Home = () => (
-	<div
-		style={{
-			position: 'relative',
-			minHeight: '100vh',
-			color: '#0F172A', // Navy dark for contrast
-			isolation: 'isolate',
-		}}>
+	<div className='relative min-h-screen text-[#0F172A] isolate overflow-hidden'>
 		<FluidBackground />
 		<Suspense fallback={<div style={{padding:'2rem', textAlign:'center'}}>Loading…</div>}>
 			<HeroSection />

@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/montreal');
+@import url('https://fonts.cdnfonts.com/css/agrandir');
 @import 'tailwindcss';
 
 :root {
@@ -12,6 +14,7 @@
 	height: 100%;
 	/* Font Family */
 	--font-primary: 'Montreal', sans-serif;
+	--font-heading: 'Montserrat', sans-serif;
 }
 
 body {
@@ -25,6 +28,9 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 	background-color: var(--snow-white);
+}
+.montreal {
+	font-family: var(--font-primary);
 }
 
 code {
