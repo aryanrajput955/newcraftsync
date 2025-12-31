@@ -70,6 +70,10 @@ const App = () => {
 					path='/aboutus'
 					element={<AboutUs />}
 				/>
+				<Route
+					path='/about-us'
+					element={<AboutUs />}
+				/>
 			</Routes>
 			</Suspense>
 			<Footer />
