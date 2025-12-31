@@ -1,33 +1,29 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, Suspense, lazy } from 'react'
 import Lenis from 'lenis'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import FluidBackground from './components/FluidBackground'
 import Navbar from './components/Header'
 import Footer from './components/Footer'
-import AboutUs from './pages/AboutUs'
-import HeroSection from './components/Herosection'
-import ProjectSection from './components/Projectssection'
-import ServicesSection from './components/ServicesSection'
-import ScrollPinSection from './components/WhyusSection'
-import TestimonialsSection from './components/Testimonials'
-import CTASection from './components/CtaSection'
+const FluidBackground = lazy(() => import('./components/FluidBackground'))
+const HeroSection = lazy(() => import('./components/Herosection'))
+const ProjectSection = lazy(() => import('./components/Projectssection'))
+const ServicesSection = lazy(() => import('./components/ServicesSection'))
+const ScrollPinSection = lazy(() => import('./components/WhyusSection'))
+const TestimonialsSection = lazy(() => import('./components/Testimonials'))
+const CTASection = lazy(() => import('./components/CtaSection'))
+const AboutUs = lazy(() => import('./pages/AboutUs'))
 const Home = () => (
-	<div
-		style={{
-			position: 'relative',
-			minHeight: '100vh',
-			color: '#0F172A', // Navy dark for contrast
-			isolation: 'isolate',
-		}}>
+	<div className='relative min-h-screen text-[#0F172A] isolate overflow-hidden'>
 		<FluidBackground />
-    <HeroSection />
-	<ServicesSection />
-	<ScrollPinSection />
-	<ProjectSection />
-	<TestimonialsSection />
-	<CTASection />
+		<Suspense fallback={<div style={{padding:'2rem', textAlign:'center'}}>Loading…</div>}>
+			<HeroSection />
+			<ServicesSection />
+			<ScrollPinSection />
+			<ProjectSection />
+			<TestimonialsSection />
+			<CTASection />
+		</Suspense>
 	</div>
 )
 
@@ -64,6 +60,7 @@ const App = () => {
 	return (
 		<Router>
 			<Navbar />
+			<Suspense fallback={<div style={{padding:'2rem', textAlign:'center'}}>Loading page…</div>}>
 			<Routes>
 				<Route
 					path='/'
@@ -74,6 +71,7 @@ const App = () => {
 					element={<AboutUs />}
 				/>
 			</Routes>
+			</Suspense>
 			<Footer />
 		</Router>
 	)

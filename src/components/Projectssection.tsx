@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import vid1 from '../assets/vid1.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +17,7 @@ const portfolioItems: PortfolioItem[] = [
   { id: 1, type: 'image', src: '/s3.webp', title: 'Brand Identity', category: 'Branding' },
   { id: 2, type: 'image', src: '/perfume.jpg', title: 'Web Design', category: 'Digital' },
   { id: 3, type: 'image', src: '/s4.webp', title: 'Marketing Campaign', category: 'Strategy' },
-  { id: 4, type: 'video', src: '/casio/casio.mp4', title: 'Motion Graphics', category: 'Video' },
+  { id: 4, type: 'video', src: vid1, title: 'Motion Graphics', category: 'Video' },
 ];
 
 const ProjectSection: React.FC = () => {
@@ -90,7 +91,7 @@ const ProjectSection: React.FC = () => {
                 A glimpse into
               </h2>
               <video
-                src="/vid3.mp4"
+                src={vid1}
                 autoPlay
                 loop
                 muted

@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import vid1 from '../assets/vid1.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,9 +148,8 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-        >
-          <source src="/src/assets/vid1.mp4" type="video/mp4" />
-        </video>
+          src={vid1}
+        />
       </div>
     </div>
   );
